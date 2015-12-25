@@ -103,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="-751.5" y="358.5"/>
         </scene>
-        <!--Detailed View Controller-->
+        <!--Picture Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DetailedViewController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,9 +133,11 @@
                             <constraint firstItem="YNk-zx-uyz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xS0-Yx-8ja"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Picture Title" id="EIN-pI-KaQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="detailLabel" destination="MCo-K7-vTU" id="Vrd-YO-cQv"/>
+                        <outlet property="imageTitle" destination="EIN-pI-KaQ" id="6hD-ZH-3gB"/>
                         <outlet property="imageView" destination="YNk-zx-uyz" id="34a-4a-tQl"/>
                     </connections>
                 </viewController>

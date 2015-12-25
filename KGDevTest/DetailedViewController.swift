@@ -13,12 +13,14 @@ class DetailedViewController: UIViewController {
     
     var point: Point!
     @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var imageTitle:UINavigationItem!
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         detailLabel.text = point.pointDescription
+        imageTitle.title = point.pointTitle
         
         var urlPath : String!
         urlPath = point?.image

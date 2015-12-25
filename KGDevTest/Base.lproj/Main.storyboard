@@ -31,9 +31,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="laX-67-9Lc">
-                                            <rect key="frame" x="18" y="8" width="74" height="48"/>
+                                            <rect key="frame" x="18" y="8" width="79" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="74" id="vSJ-N7-Mtd"/>
+                                                <constraint firstAttribute="width" constant="79" id="vSJ-N7-Mtd"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXf-2X-SuK">
@@ -60,7 +60,7 @@
                                         <constraint firstItem="laX-67-9Lc" firstAttribute="leading" secondItem="Ff9-Nc-VVK" secondAttribute="leadingMargin" constant="10" id="Zhb-CD-6gg"/>
                                         <constraint firstItem="laX-67-9Lc" firstAttribute="top" secondItem="Ff9-Nc-VVK" secondAttribute="top" constant="8" id="acw-iv-l7O"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="laX-67-9Lc" secondAttribute="bottom" id="aeC-na-X5B"/>
-                                        <constraint firstItem="fXf-2X-SuK" firstAttribute="leading" secondItem="laX-67-9Lc" secondAttribute="trailing" constant="32" id="fY4-3t-Qlz"/>
+                                        <constraint firstItem="fXf-2X-SuK" firstAttribute="leading" secondItem="laX-67-9Lc" secondAttribute="trailing" constant="27" id="fY4-3t-Qlz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="fXf-2X-SuK" secondAttribute="trailing" id="iDE-7D-3hj"/>
                                         <constraint firstItem="gQX-A7-VqL" firstAttribute="top" secondItem="fXf-2X-SuK" secondAttribute="bottom" constant="-1" id="ktG-rz-ccc"/>
                                         <constraint firstItem="gQX-A7-VqL" firstAttribute="bottom" secondItem="laX-67-9Lc" secondAttribute="bottom" id="uEn-aU-mtK"/>

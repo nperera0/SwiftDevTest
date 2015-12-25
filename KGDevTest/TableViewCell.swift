@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TableViewCell: UITableViewCell {
     
@@ -14,6 +15,20 @@ class TableViewCell: UITableViewCell {
         didSet {
             titleLabel.text = point?.pointTitle
             detailLabel.text = point?.pointDescription
+            
+            var urlPath : String!
+            urlPath = point?.thumb
+            
+            let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
+            
+            Alamofire.request(.GET, imageURL).response {
+                (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
+                
+                if let data = data {
+                    let image = UIImage(data: data as NSData)
+                    self.thumbImage.image = image
+                }
+            }
         }
     }
     

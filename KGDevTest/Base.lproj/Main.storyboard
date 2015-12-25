@@ -31,7 +31,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="laX-67-9Lc">
-                                            <rect key="frame" x="18" y="0.0" width="74" height="56"/>
+                                            <rect key="frame" x="18" y="8" width="74" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="74" id="vSJ-N7-Mtd"/>
                                             </constraints>
@@ -51,11 +51,15 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="topMargin" secondItem="fXf-2X-SuK" secondAttribute="top" id="4eP-sl-cEg"/>
+                                        <constraint firstItem="laX-67-9Lc" firstAttribute="top" secondItem="Ff9-Nc-VVK" secondAttribute="topMargin" id="4o8-8z-LIk"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="gQX-A7-VqL" secondAttribute="trailing" id="55M-AO-lpm"/>
                                         <constraint firstItem="fXf-2X-SuK" firstAttribute="leading" secondItem="gQX-A7-VqL" secondAttribute="leading" id="6m1-u4-xl3"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="gQX-A7-VqL" secondAttribute="bottom" id="HLJ-h1-GZF"/>
+                                        <constraint firstAttribute="topMargin" secondItem="laX-67-9Lc" secondAttribute="top" id="Hv1-dN-bHq"/>
+                                        <constraint firstItem="laX-67-9Lc" firstAttribute="centerY" secondItem="Ff9-Nc-VVK" secondAttribute="centerY" id="LqO-FI-Q3m"/>
                                         <constraint firstItem="laX-67-9Lc" firstAttribute="leading" secondItem="Ff9-Nc-VVK" secondAttribute="leadingMargin" constant="10" id="Zhb-CD-6gg"/>
-                                        <constraint firstItem="laX-67-9Lc" firstAttribute="top" secondItem="Ff9-Nc-VVK" secondAttribute="top" id="acw-iv-l7O"/>
+                                        <constraint firstItem="laX-67-9Lc" firstAttribute="top" secondItem="Ff9-Nc-VVK" secondAttribute="top" constant="8" id="acw-iv-l7O"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="laX-67-9Lc" secondAttribute="bottom" id="aeC-na-X5B"/>
                                         <constraint firstItem="fXf-2X-SuK" firstAttribute="leading" secondItem="laX-67-9Lc" secondAttribute="trailing" constant="32" id="fY4-3t-Qlz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="fXf-2X-SuK" secondAttribute="trailing" id="iDE-7D-3hj"/>
                                         <constraint firstItem="gQX-A7-VqL" firstAttribute="top" secondItem="fXf-2X-SuK" secondAttribute="bottom" constant="-1" id="ktG-rz-ccc"/>

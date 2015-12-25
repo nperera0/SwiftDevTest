@@ -115,37 +115,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Nj-YV-v1s">
-                                <rect key="frame" x="0.0" y="64" width="375" height="536"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNk-zx-uyz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNk-zx-uyz">
                                 <rect key="frame" x="0.0" y="64" width="381" height="536"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-aX-lq1">
-                                <rect key="frame" x="0.0" y="20" width="378" height="44"/>
-                                <items>
-                                    <navigationItem title="Detailed View" id="oOM-Aa-T8l"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Picture Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCo-K7-vTU">
-                                <rect key="frame" x="20" y="626" width="340" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Picture Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCo-K7-vTU">
+                                <rect key="frame" x="16" y="626" width="348" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MCo-K7-vTU" secondAttribute="bottom" constant="20" id="NYk-55-nt2"/>
-                            <constraint firstItem="QXg-aX-lq1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ouw-a8-anx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="MCo-K7-vTU" secondAttribute="leading" id="SIS-pC-uMw"/>
-                            <constraint firstItem="5Nj-YV-v1s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="VGp-2U-QIo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MCo-K7-vTU" secondAttribute="trailing" constant="-5" id="hs7-GP-f6F"/>
+                            <constraint firstItem="YNk-zx-uyz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xS0-Yx-8ja"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="detailLabel" destination="MCo-K7-vTU" id="Vrd-YO-cQv"/>
+                        <outlet property="imageView" destination="YNk-zx-uyz" id="34a-4a-tQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

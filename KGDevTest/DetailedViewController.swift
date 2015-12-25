@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailedViewController: UIViewController {
     
@@ -18,6 +19,21 @@ class DetailedViewController: UIViewController {
         super.viewDidLoad()
 
         detailLabel.text = point.pointDescription
+        
+        var urlPath : String!
+        urlPath = point?.image
+        
+        let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
+        
+        Alamofire.request(.GET, imageURL).response {
+            (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
+            
+            if let data = data {
+                let image = UIImage(data: data as NSData)
+                self.imageView.image = image
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

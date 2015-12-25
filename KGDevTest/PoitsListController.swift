@@ -73,7 +73,8 @@ class PoitsListController: UITableViewController {
         // return the number of rows
         return points.count
     }
-
+    
+    // automatically adjust the height of the cell
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -94,14 +95,19 @@ class PoitsListController: UITableViewController {
     
 
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let cell = sender as? UITableViewCell {
+            if let indexPath = self.tableView.indexPathForCell(cell) {
+                let point = points[indexPath.row]
+                let detailController = segue.destinationViewController as! DetailedViewController
+                detailController.point = point
+            }
+        }
     }
-    */
+    
 
 }

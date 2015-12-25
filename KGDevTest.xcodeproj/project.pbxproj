@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45864C4D1C2CDC8C00D638A3 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */; };
 		45C9A4A81C2C7839004E9265 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4A71C2C7839004E9265 /* TableViewCell.swift */; };
 		45C9A4AA1C2C79EC004E9265 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4A91C2C79EC004E9265 /* Point.swift */; };
 		45C9A4B01C2C7D61004E9265 /* PoitsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4AF1C2C7D61004E9265 /* PoitsListController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		45C9A4A71C2C7839004E9265 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		45C9A4A91C2C79EC004E9265 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		45C9A4AF1C2C7D61004E9265 /* PoitsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoitsListController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				45C9A4A71C2C7839004E9265 /* TableViewCell.swift */,
 				45C9A4A91C2C79EC004E9265 /* Point.swift */,
 				45C9A4AF1C2C7D61004E9265 /* PoitsListController.swift */,
+				45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */,
 			);
 			path = KGDevTest;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				45C9A4AA1C2C79EC004E9265 /* Point.swift in Sources */,
 				45C9A4A81C2C7839004E9265 /* TableViewCell.swift in Sources */,
+				45864C4D1C2CDC8C00D638A3 /* DetailedViewController.swift in Sources */,
 				45EA5D851C29AB8000AB3A5B /* ViewController.swift in Sources */,
 				45C9A4B01C2C7D61004E9265 /* PoitsListController.swift in Sources */,
 				45EA5D831C29AB8000AB3A5B /* AppDelegate.swift in Sources */,

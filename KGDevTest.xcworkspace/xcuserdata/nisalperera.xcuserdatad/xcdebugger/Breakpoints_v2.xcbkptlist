@@ -19,5 +19,83 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KGDevTest/Point.swift"
+            timestampString = "472846964.718392"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "Point"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KGDevTest.Point.pointTitle.getter : Swift.String"
+                  moduleName = "KGDevTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nisalperera/Documents/iOS%20Apps/KGDevTest/KGDevTest/Point.swift"
+                  timestampString = "472846964.764622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KGDevTest.Point.pointTitle.setter : Swift.String"
+                  moduleName = "KGDevTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nisalperera/Documents/iOS%20Apps/KGDevTest/KGDevTest/Point.swift"
+                  timestampString = "472846964.768798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KGDevTest.Point.init (KGDevTest.Point.Type)(title : Swift.String, locationName : Swift.String, thumbUrl : Swift.String, imageUrl : Swift.String, coordinate : __C.CLLocationCoordinate2D) -&gt; KGDevTest.Point"
+                  moduleName = "KGDevTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nisalperera/Documents/iOS%20Apps/KGDevTest/KGDevTest/Point.swift"
+                  timestampString = "472846964.769074"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KGDevTest.Point.pointTitle.materializeForSet : Swift.String"
+                  moduleName = "KGDevTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nisalperera/Documents/iOS%20Apps/KGDevTest/KGDevTest/Point.swift"
+                  timestampString = "472846964.769268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

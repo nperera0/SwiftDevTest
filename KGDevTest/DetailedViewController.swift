@@ -20,10 +20,10 @@ class DetailedViewController: UIViewController {
         super.viewDidLoad()
 
         detailLabel.text = point.pointDescription
-        imageTitle.title = point.pointTitle
+        imageTitle.title = point.title
         
         var urlPath : String!
-        urlPath = point?.image
+        urlPath = point?.imageUrl
         
         let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
         
@@ -37,21 +37,5 @@ class DetailedViewController: UIViewController {
         }
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -13,11 +13,11 @@ class TableViewCell: UITableViewCell {
     
     var point: Point? {
         didSet {
-            titleLabel.text = point?.pointTitle
+            titleLabel.text = point?.title
             detailLabel.text = point?.pointDescription
             
             var urlPath : String!
-            urlPath = point?.thumb
+            urlPath = point?.thumbUrl
             
             let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
             

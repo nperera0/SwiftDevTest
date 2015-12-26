@@ -7,16 +7,33 @@
 //
 
 import Foundation
+import MapKit
 
-class Point: NSObject {
-    var pointTitle: String = ""
-    var pointDescription: String = ""
+class Point: NSObject, MKAnnotation {
+    let title: String?
+    var pointDescription: String?
     // rest api endpoint to thumb and image
-    var thumb: String = ""
-    var image: String = ""
-    var latitude: Double = 0.0
-    var longitude: Double = 0.0
-
+    var thumbUrl: String?
+    var imageUrl: String?
+    var latitude: Double?
+    var longitude: Double?
+    let coordinate: CLLocationCoordinate2D
+    
+    init(title: String, locationName: String, thumbUrl: String, imageUrl: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.pointDescription = locationName
+        self.thumbUrl = thumbUrl
+        self.imageUrl = imageUrl
+        self.coordinate = coordinate
+        
+        super.init()
+    }
+    
+    var subtitle: String? {
+        return pointDescription
+    }
+    
+    
 }
 
 

@@ -65,7 +65,7 @@
         <!--Picture Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DetailedViewController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DetailedViewController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="-953.5" y="-481.5"/>
         </scene>
-        <!--Poits List Controller-->
+        <!--Points List Controller-->
         <scene sceneID="XI5-sA-jic">
             <objects>
-                <viewController id="9tx-Yw-53e" customClass="PoitsListController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9tx-Yw-53e" customClass="PointsListController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dJx-0Q-8KS"/>
                         <viewControllerLayoutGuide type="bottom" id="UZh-cL-mZE"/>
@@ -158,7 +158,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQX-A7-VqL">
                                                     <rect key="frame" x="124" y="28" width="243" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="169" y="-174.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="hFF-dd-UXv">
             <objects>
-                <viewController id="LB1-pK-OYz" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="LB1-pK-OYz" customClass="MapViewController" customModule="KGDevTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vQu-RR-Bjd"/>
                         <viewControllerLayoutGuide type="bottom" id="l7U-Ra-rn4"/>
@@ -210,8 +210,22 @@
                     <view key="view" contentMode="scaleToFill" id="rZV-WE-G9n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-td-SCM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q8E-td-SCM" firstAttribute="leading" secondItem="rZV-WE-G9n" secondAttribute="leading" id="Sen-0O-z0a"/>
+                            <constraint firstAttribute="trailing" secondItem="Q8E-td-SCM" secondAttribute="trailing" id="ecw-Je-W9K"/>
+                            <constraint firstItem="Q8E-td-SCM" firstAttribute="top" secondItem="vQu-RR-Bjd" secondAttribute="bottom" id="fgG-Nc-LRy"/>
+                            <constraint firstItem="Q8E-td-SCM" firstAttribute="bottom" secondItem="l7U-Ra-rn4" secondAttribute="top" id="g0t-qa-yzO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Q8E-td-SCM" id="l7R-dI-L7S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwP-i5-9vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

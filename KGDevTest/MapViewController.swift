@@ -78,9 +78,18 @@ class MapViewController: UIViewController , MKMapViewDelegate {
             pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             pinView!.canShowCallout = true
             
+            var urlPath:String = ""
+            
+            for point in points {
+                if (annotation.title! == point.title){
+                    urlPath = point.thumbUrl!
+                    break;
+                }
+            }
+            
             // Add image to left callout
-            var urlPath : String!
-            urlPath = "images/thumb1.png"
+            //var urlPath : String!
+            //urlPath = "images/thumb1.png"
             
             let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
             
@@ -89,7 +98,9 @@ class MapViewController: UIViewController , MKMapViewDelegate {
                 
                 if let data = data {
                     let image =  UIImage(data: data as NSData)
+                    //let mugIconView = UIImageView(image: UIImage(data: data as NSData))
                     pinView!.image = image
+                    //pinView!.leftCalloutAccessoryView = mugIconView
                 }
             }
             

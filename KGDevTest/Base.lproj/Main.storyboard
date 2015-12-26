@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169.5" y="611.5"/>
+            <point key="canvasLocation" x="716.5" y="-481.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OIb-lM-ScR">
@@ -225,11 +225,15 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Q8E-td-SCM" id="l7R-dI-L7S"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mapSegue" id="WTz-dz-CpC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwP-i5-9vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227.5" y="-938.5"/>
+            <point key="canvasLocation" x="165.5" y="-937.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WTz-dz-CpC"/>
+    </inferredMetricsTieBreakers>
 </document>

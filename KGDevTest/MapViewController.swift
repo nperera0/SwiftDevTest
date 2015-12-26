@@ -20,18 +20,20 @@ class MapViewController: UIViewController , MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set initial location in Honolulu
+        // set initial location and center the map
         let initialLocation = CLLocation(latitude: 43.645113, longitude: -79.396137)
         centerMapOnLocation(initialLocation)
+        mapView.showsPointsOfInterest = false
         
+        // populate the points array
         getPoints()
+        
+        // set MapViewController as delegate of MKMapViewDelegate
         mapView.delegate = self
     }
     
     func getPoints(){
-        // This function returns immediately: The request happens on a
-        // background thread
-        
+        // This function returns immediately: The request happens on a background thread
         Alamofire.request(.GET, "http://ios.kg-dev.com/api/photos/points.json").response {
             (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
             if let data = data {
@@ -49,7 +51,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
                     }
                 }
                 
-                // Make sure we refresh the table view on the main thread
+                // Make sure we refresh map view on the main thread
                 dispatch_async(dispatch_get_main_queue()) {
                     self.mapView.addAnnotations(self.points)
                 }
@@ -57,6 +59,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
         }
     }
     
+    // called at mapView initialization
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -64,6 +67,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    // MARK: - MKMapViewDelegate functions
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -72,11 +76,15 @@ class MapViewController: UIViewController , MKMapViewDelegate {
             return nil
         }
         
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("pin")
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("pin")as? MKPinAnnotationView
         
         if pinView == nil {
-            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             pinView!.canShowCallout = true
+            pinView!.animatesDrop = true
+            
+            let button = UIButton(type: UIButtonType.DetailDisclosure) as UIButton // button with info sign in it
+            pinView?.rightCalloutAccessoryView = button
             
             var urlPath:String = ""
             
@@ -88,43 +96,56 @@ class MapViewController: UIViewController , MKMapViewDelegate {
             }
             
             // Add image to left callout
-            //var urlPath : String!
-            //urlPath = "images/thumb1.png"
-            
             let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
             
             Alamofire.request(.GET, imageURL).response {
                 (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
                 
                 if let data = data {
-                    let image =  UIImage(data: data as NSData)
-                    //let mugIconView = UIImageView(image: UIImage(data: data as NSData))
-                    pinView!.image = image
-                    //pinView!.leftCalloutAccessoryView = mugIconView
+                    let mugIconView = UIImageView(image: UIImage(data: data as NSData))
+                    pinView!.leftCalloutAccessoryView = mugIconView
                 }
             }
-            
-                        // Add detail button to right callout
-            //var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as UIButton
-            //pinView!.rightCalloutAccessoryView = calloutButton
         }
         else {
             pinView!.annotation = annotation
         }
         
         return pinView
-        
+    }
+    
+    // When user taps on the disclosure button you can perform a segue to navigate to another view controller
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView{
+            print(view.annotation!.title) // annotation's title
+            
+            performSegueWithIdentifier("mapSegue", sender: view)
+        }
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "mapSegue" )
+        {
+            //Perform a segue here to navigate to DetailedViewController
+            let senderTitle = (sender as! MKAnnotationView).annotation!.title
+            
+            // find the point object of the clicked annotation and pass it to DetailedViewController
+            for point in points {
+                if (senderTitle! == point.title){
+                    let detailController = segue.destinationViewController as! DetailedViewController
+                    detailController.point = point
+                    break;
+                }
+            }
+        }
     }
-    */
+    
 
 }

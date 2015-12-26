@@ -11,10 +11,9 @@ import MapKit
 import Alamofire
 import SwiftyJSON
 
-class PointsListController: UITableViewController {
+class ListViewController: UITableViewController {
     
     var points = Array<Point>()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +22,7 @@ class PointsListController: UITableViewController {
     }
     
     func getPoints(){
-        // This function returns immediately: The request happens on a
-        // background thread
+        // This function returns immediately: The request happens on a background thread
         
         Alamofire.request(.GET, "http://ios.kg-dev.com/api/photos/points.json").response {
             (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
@@ -51,10 +49,6 @@ class PointsListController: UITableViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -88,8 +82,6 @@ class PointsListController: UITableViewController {
     }
     
 
-    
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -12,11 +12,12 @@ import MapKit
 class Point: NSObject, MKAnnotation {
     let title: String?
     var pointDescription: String?
+    
     // rest api endpoint to thumb and image
     var thumbUrl: String?
     var imageUrl: String?
-    var latitude: Double?
-    var longitude: Double?
+    
+    //cordinates used by mapview 
     let coordinate: CLLocationCoordinate2D
     
     init(title: String, locationName: String, thumbUrl: String, imageUrl: String, coordinate: CLLocationCoordinate2D) {

@@ -11,7 +11,7 @@
 		45864C4D1C2CDC8C00D638A3 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */; };
 		45C9A4A81C2C7839004E9265 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4A71C2C7839004E9265 /* TableViewCell.swift */; };
 		45C9A4AA1C2C79EC004E9265 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4A91C2C79EC004E9265 /* Point.swift */; };
-		45C9A4B01C2C7D61004E9265 /* PointsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4AF1C2C7D61004E9265 /* PointsListController.swift */; };
+		45C9A4B01C2C7D61004E9265 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9A4AF1C2C7D61004E9265 /* ListViewController.swift */; };
 		45C9A4B41C2C8A83004E9265 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C9A4B31C2C8A83004E9265 /* MapKit.framework */; };
 		45EA5D831C29AB8000AB3A5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA5D821C29AB8000AB3A5B /* AppDelegate.swift */; };
 		45EA5D851C29AB8000AB3A5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA5D841C29AB8000AB3A5B /* ViewController.swift */; };
@@ -26,7 +26,7 @@
 		45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		45C9A4A71C2C7839004E9265 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		45C9A4A91C2C79EC004E9265 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		45C9A4AF1C2C7D61004E9265 /* PointsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsListController.swift; sourceTree = "<group>"; };
+		45C9A4AF1C2C7D61004E9265 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		45C9A4B31C2C8A83004E9265 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		45EA5D7F1C29AB8000AB3A5B /* KGDevTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGDevTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45EA5D821C29AB8000AB3A5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				45EA5D8E1C29AB8000AB3A5B /* Info.plist */,
 				45C9A4A71C2C7839004E9265 /* TableViewCell.swift */,
 				45C9A4A91C2C79EC004E9265 /* Point.swift */,
-				45C9A4AF1C2C7D61004E9265 /* PointsListController.swift */,
+				45C9A4AF1C2C7D61004E9265 /* ListViewController.swift */,
 				45864C4C1C2CDC8C00D638A3 /* DetailedViewController.swift */,
 				45758EAD1C2E797B009E2891 /* MapViewController.swift */,
 			);
@@ -239,7 +239,7 @@
 				45C9A4A81C2C7839004E9265 /* TableViewCell.swift in Sources */,
 				45864C4D1C2CDC8C00D638A3 /* DetailedViewController.swift in Sources */,
 				45EA5D851C29AB8000AB3A5B /* ViewController.swift in Sources */,
-				45C9A4B01C2C7D61004E9265 /* PointsListController.swift in Sources */,
+				45C9A4B01C2C7D61004E9265 /* ListViewController.swift in Sources */,
 				45EA5D831C29AB8000AB3A5B /* AppDelegate.swift in Sources */,
 				45758EAE1C2E797B009E2891 /* MapViewController.swift in Sources */,
 			);

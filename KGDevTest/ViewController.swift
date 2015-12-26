@@ -9,8 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //segmentedControl is used to switch between ListView and MapView 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     

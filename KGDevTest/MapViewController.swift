@@ -42,6 +42,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
                 
                 //print(json)
                 
+                // parse the JSON response and populate the points array 
                 if let items = json["result"].array {
                     for item in items {
                         let coordinate = CLLocationCoordinate2D(latitude: item["latitude"].double!, longitude: item["longitude"].double!)
@@ -69,6 +70,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
     
     // MARK: - MKMapViewDelegate functions
     
+    //customize the Pin Annotation View
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         if annotation is MKUserLocation {
@@ -83,6 +85,7 @@ class MapViewController: UIViewController , MKMapViewDelegate {
             pinView!.canShowCallout = true
             pinView!.animatesDrop = true
             
+            // add button to the right callout
             let button = UIButton(type: UIButtonType.DetailDisclosure) as UIButton // button with info sign in it
             pinView?.rightCalloutAccessoryView = button
             

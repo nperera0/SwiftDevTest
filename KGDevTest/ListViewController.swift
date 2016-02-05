@@ -1,5 +1,5 @@
 //
-//  PoitsListController.swift
+//  ListViewController.swift
 //  KGDevTest
 //
 //  Created by Nisal Perera on 2015-12-24.

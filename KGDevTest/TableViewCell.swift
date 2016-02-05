@@ -21,6 +21,7 @@ class TableViewCell: UITableViewCell {
             
             let imageURL:String! = "http://ios.kg-dev.com/api/photos/\(urlPath)"
             
+            // pull the image by calling rest API endpoint
             Alamofire.request(.GET, imageURL).response {
                 (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void in
                 
